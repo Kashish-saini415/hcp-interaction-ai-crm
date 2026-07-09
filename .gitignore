@@ -1,0 +1,28 @@
+# Sensitive API Keys and Environment Variables
+.env
+.env.local
+*.env
+
+# Frontend Dependencies
+frontend/node_modules/
+node_modules/
+
+# Python Virtual Environment and Cache
+backend/__pycache__/
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# Database File
+backend/crm.db
+crm.db
+
+# Production Builds
+frontend/dist/
+frontend/build/
+
+# IDE and System Files
+.vscode/
+.DS_Store
