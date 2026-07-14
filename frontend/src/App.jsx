@@ -76,7 +76,7 @@ function App() {
             </div>
             <div className="group">
               <label>Interaction Type</label>
-              <select value={formData.interaction_type} onChange={(e) => handleInputChange('interaction_type', e.target.value)}>
+              <select value={formData.interaction_type || ''} onChange={(e) => handleInputChange('interaction_type', e.target.value)}>
                 <option value="Meeting">Meeting</option>
                 <option value="Call">Call</option>
               </select>
@@ -86,11 +86,11 @@ function App() {
           <div className="row">
             <div className="group">
               <label>Date</label>
-              <input type="date" value={formData.date} onChange={(e) => handleInputChange('date', e.target.value)} />
+              <input type="date" value={formData.date || ''} onChange={(e) => handleInputChange('date', e.target.value)} />
             </div>
             <div className="group">
               <label>Time</label>
-              <input type="time" value={formData.time} onChange={(e) => handleInputChange('time', e.target.value)} />
+              <input type="time" value={formData.time || ''} onChange={(e) => handleInputChange('time', e.target.value)} />
             </div>
           </div>
 
@@ -115,7 +115,8 @@ function App() {
             <div className="radios">
               {['Positive', 'Neutral', 'Negative'].map((s) => (
                 <label key={s}>
-                  <input type="radio" name="sentiment" value={s} checked={formData.sentiment === s} onChange={() => handleInputChange('sentiment', s)} /> {s}
+                  <input type="radio" name="sentiment" value={s} checked={formData.sentiment ? formData.sentiment === s : false}
+                  onChange={() => handleInputChange('sentiment', s)} /> {s}
                 </label>
               ))}
             </div>

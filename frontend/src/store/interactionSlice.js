@@ -3,12 +3,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   formData: {
     hcp_name: '',
-    interaction_type: 'Meeting',
-    date: '2026-04-19',
-    time: '19:36',
+    interaction_type: '',
+    date: '',
+    time: '',
     attendees: '',
     topics_discussed: '',
-    sentiment: 'Neutral',
+    sentiment: '',
     outcomes: '',
     follow_up_actions: ''
   },
