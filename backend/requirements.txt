@@ -5,3 +5,4 @@ langgraph==1.2.9
 pydantic==2.13.4
 python-dotenv==1.2.2
 SQLAlchemy==2.0.51
+uvicorn
