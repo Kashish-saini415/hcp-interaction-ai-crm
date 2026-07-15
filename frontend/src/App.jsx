@@ -17,7 +17,7 @@ function App() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/interaction/manual', formData);
+      const res = await axios.post('https://hcp-interaction-ai-crm.onrender.com/api/interaction/manual', formData);
       alert(res.data.message);
       dispatch(clearForm());
     } catch (err) {
@@ -35,7 +35,7 @@ function App() {
     setChatInput('');
 
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/interaction/chat', { message: userMsg });
+      const res = await axios.post('https://hcp-interaction-ai-crm.onrender.com/api/interaction/chat', { message: userMsg });
       const reply = res.data.reply;
       dispatch(addChatMessage({ sender: 'ai', text: reply }));
 
